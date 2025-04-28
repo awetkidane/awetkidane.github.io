@@ -3,110 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Gebretinsae Awet - Computer Engineer & ML Researcher</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #4a6fa5;
+            --accent: #16a085;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #666;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
         }
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
-        img {
+        .profile-img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
+            border: 4px solid var(--accent);
         }
         h1 {
-            color: #2c3e50;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        .title {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-top: 0;
         }
         h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
         }
         a {
-            color: #3498db;
+            color: var(--secondary);
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
+            color: var(--primary);
         }
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            bottom: -25px;
+            width: 1px;
+            background: #ddd;
+        }
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        .date {
+            color: var(--light-text);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        .skill-item {
+            background-color: #e9f0f8;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: inline-block;
         }
         .project {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .project h3 {
-            margin-top: 0;
-            color: #2c3e50;
+        .project:last-child {
+            border-bottom: none;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        .language-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .language-table th, .language-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .language-table th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/150" alt="Profile Picture">
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Student</p>
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        <h1>Gebretinsae Awet</h1>
+        <p class="title">Computer Engineering Instructor | Machine Learning Researcher | IoT Developer</p>
+        <p>
+            <a href="mailto:kidane.awet1@gmail.com">kidane.awet1@gmail.com</a> | 
+            <a href="mailto:awet.kidane@mu.edu.et">awet.kidane@mu.edu.et</a> | 
+            <a href="tel:+251914406202">(+251) 0914406202</a>
+        </p>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer who loves building websites and solving problems.</p>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Personal Portfolio Website</h3>
-            <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my projects and skills. Features a clean design and mobile-friendly layout.</p>
-            <a href="#">View Project</a>
-        </div>
-        
-        <div class="project">
-            <h3>Task Management App</h3>
-            <p>A web application for managing daily tasks with features like adding, editing, and deleting tasks. Built with React.js and uses local storage to save tasks.</p>
-            <a href="#">View Project</a>
-        </div>
-        
-        <div class="project">
-            <h3>Weather Dashboard</h3>
-            <p>An interactive weather application that displays current conditions and forecasts using data from a weather API. Users can search for weather by location.</p>
-            <a href="#">View Project</a>
-        </div>
-        
-        <div class="project">
-            <h3>E-commerce Product Page</h3>
-            <p>A mock e-commerce product page with image gallery, product details, and add-to-cart functionality. Created as a frontend challenge with pure CSS and JavaScript.</p>
-            <a href="#">View Project</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Contact</h2>
         <p>
-            Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br>
-            GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>
-            LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a>
+            Computer Engineering professional with a Master's degree specializing in advanced computing systems and machine learning. 
+            Currently serving as an Engineering Instructor at Mekelle University while contributing to cutting-edge research in 
+            medical diagnostics through machine learning and IoT solutions. Passionate about developing technological solutions 
+            for healthcare, agriculture, and disaster prevention.
         </p>
     </section>
-</body>
-</html>
+
+    <section>
+        <h2>Education</h2>
+        <div class="timeline-item">
+            <div class="date">09/2016 - 11/2019
